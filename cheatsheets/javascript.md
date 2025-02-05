@@ -17,8 +17,6 @@ const PI = 3.14159;    // Constante, não pode ser modificada
 - `let`: É como um brinquedo novo que você cuida com mais cuidado;
 - `const`: É como um brinquedo especial que nunca pode ser mudado.
 
----
-
 ### Tipos de Dados
 ```javascript
 // Tipos Primitivos
@@ -49,7 +47,27 @@ let igual = (5 == "5");    // true (compara valor)
 let estritamenteIgual = (5 === "5"); // false (compara valor e tipo)
 ```
 
----
+**Explicação Detalhada dos Operadores**:
+
+#### Operadores Matemáticos
+- **O que acontece**: 
+  - Realiza operações matemáticas básicas
+  - Segue ordem matemática tradicional
+  - Permite cálculos simples entre números
+- **Exemplos de Uso**:
+  - `5 + 3` resulta em `8`
+  - `10 - 4` resulta em `6`
+  - `3 * 4` resulta em `12`
+  - `15 / 3` resulta em `5`
+
+#### Operadores de Comparação
+- **O que acontece**:
+  - `==` compara apenas o valor, fazendo conversão de tipo
+  - `===` compara valor e tipo, sem conversão
+  - Útil para validações precisas
+- **Comportamento**:
+  - `5 == "5"` retorna `true` (compara valor)
+  - `5 === "5"` retorna `false` (compara valor e tipo)
 
 ## Estruturas de Controle
 
@@ -75,6 +93,28 @@ switch (diaDaSemana) {
 }
 ```
 
+**Explicação Detalhada das Condicionais**:
+
+#### If-Else
+- **O que acontece**:
+  - Testa uma condição específica
+  - Executa código baseado no resultado da condição
+  - Permite criar fluxos de decisão
+- **Exemplo**:
+  - Se a idade for maior ou igual a 18, mostra "Adulto"
+  - Caso contrário, mostra "Menor"
+
+#### Switch
+- **O que acontece**:
+  - Compara um valor contra múltiplos casos possíveis
+  - Executa código específico para cada caso
+  - `break` impede execução dos próximos casos
+  - `default` captura situações não especificadas previamente
+- **Comportamento**:
+  - Para "Segunda": mostra "Início da semana"
+  - Para "Sexta": mostra "Quase fim de semana"
+  - Para outros dias: mostra "Dia normal"
+
 ### Loops
 ```javascript
 // For tradicional
@@ -95,72 +135,156 @@ for (let propriedade in pessoa) {
 }
 ```
 
----
+**Explicação Detalhada dos Loops**:
 
-## Funções
+#### For Tradicional
+- **O que acontece**:
+  - Executa bloco de código número definido de vezes
+  - `i = 0`: Começa no zero
+  - `i < 5`: Continua enquanto menor que 5
+  - `i++`: Incrementa 1 a cada iteração
+- **Resultado Esperado**:
+  - Imprime números: 0, 1, 2, 3, 4
 
-### Declarações
+#### For...of (Arrays)
+- **O que acontece**:
+  - Percorre todos elementos de um array
+  - Captura valor de cada elemento
+  - Simplicidade na iteração
+- **Resultado Esperado**:
+  - Imprime: "maçã", "banana", "laranja"
+
+#### For...in (Objetos)
+- **O que acontece**:
+  - Percorre todas propriedades de um objeto
+  - Permite acessar chaves e valores
+  - Útil para explorar estruturas de dados
+- **Resultado Esperado**:
+  - Imprime: "nome: João", "idade: 25"
+
+## Funções: Blocos de Código Reutilizáveis
+
 ```javascript
 // Função tradicional
 function somar(a, b) {
-    return a + b;
+    return a + b;  // Resultado: soma de a + b
 }
 
 // Arrow Function
-const multiplicar = (a, b) => a * b;
+const multiplicar = (a, b) => a * b;  // Multiplica a * b
 
 // Função com parâmetro padrão
 function saudacao(nome = "Visitante") {
-    return `Olá, ${nome}!`;
+    return `Olá, ${nome}!`;  // Resultado: "Olá, [nome]!"
 }
 ```
 
+**Explicação Detalhada das Funções**:
+
+#### Função Tradicional
+- **O que acontece**:
+  - Cria bloco de código reutilizável
+  - Recebe parâmetros de entrada
+  - Retorna um resultado específico
+- **Exemplo**:
+  - `somar(2, 3)` retorna `5`
+
+#### Arrow Function
+- **O que acontece**:
+  - Sintaxe compacta para funções
+  - Mantém a mesma lógica de funções tradicionais
+  - Ideal para funções curtas
+- **Exemplo**:
+  - `multiplicar(4, 5)` retorna `20`
+
+#### Função com Parâmetro Padrão
+- **O que acontece**:
+  - Define valor padrão se nenhum argumento for passado
+  - Aumenta flexibilidade da função
+- **Comportamento**:
+  - `saudacao()` retorna "Olá, Visitante!"
+  - `saudacao("Maria")` retorna "Olá, Maria!"
+
 ## Manipulação de Arrays
 
-### Métodos Essenciais
 ```javascript
 let numeros = [1, 2, 3, 4, 5];
 
-// Adicionar/Remover
-numeros.push(6);       // Adiciona no final
-numeros.pop();         // Remove do final
+numeros.push(6);       // Adiciona 6, resultado: [1,2,3,4,5,6]
+numeros.pop();         // Remove último, resultado: [1,2,3,4,5]
 
-// Transformação
-let dobrado = numeros.map(x => x * 2);
-let filtrado = numeros.filter(x => x > 3);
+let dobrado = numeros.map(x => x * 2);  
+// Resultado: [2,4,6,8,10]
+
+let filtrado = numeros.filter(x => x > 3);  
+// Resultado: [4,5]
 ```
 
----
+**Explicação Detalhada de Manipulação de Arrays**:
+
+#### Métodos Básicos
+- **`push()`**:
+  - Adiciona elemento no final do array
+  - Aumenta o tamanho do array
+
+- **`pop()`**:
+  - Remove o último elemento do array
+  - Reduz o tamanho do array
+
+#### Métodos Avançados
+- **`map()`**:
+  - Transforma cada elemento do array
+  - Cria novo array com resultados
+  - Não modifica array original
+
+- **`filter()`**:
+  - Cria novo array com elementos que passam no teste
+  - Mantém apenas elementos que atendem condição específica
 
 ## Programação Assíncrona
 
-### Promises
 ```javascript
-// Forma básica
+// Promise simula operação que leva tempo
 function buscarDados() {
     return new Promise((resolve, reject) => {
-        // Simulando busca de dados
         let sucesso = true;
         if (sucesso) {
-            resolve("Dados carregados");
+            resolve("Dados carregados");  // Caso sucesso
         } else {
-            reject("Erro na busca");
+            reject("Erro na busca");      // Caso falha
         }
     });
 }
 
-// Usando async/await
+// Async/Await simplifica tratamento
 async function exemplo() {
     try {
         let resultado = await buscarDados();
-        console.log(resultado);
+        console.log(resultado);  // "Dados carregados"
     } catch (erro) {
-        console.error(erro);
+        console.error(erro);     // Tratamento de erro
     }
 }
 ```
 
----
+**Explicação Detalhada de Programação Assíncrona**:
+
+#### Promises
+- **O que são**:
+  - Representam valor futuro de operação assíncrona
+  - Podem estar pendente, resolvida ou rejeitada
+- **Estados**:
+  - `resolve`: Operação concluída com sucesso
+  - `reject`: Operação falhou
+
+#### Async/Await
+- **O que acontece**:
+  - Simplifica trabalho com Promises
+  - Torna código assíncrono mais síncrono
+  - Facilita tratamento de erros
+- **Comportamento**:
+  - `await`: Pausa execução até Promise ser resolvida
+  - `try/catch`: Captura erros de forma elegante
 
 ## Links Úteis 🌐
 
@@ -173,8 +297,6 @@ async function exemplo() {
 ### Comunidades
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
 - [Dev.to JavaScript](https://dev.to/t/javascript)
-
----
 
 ## Boas Práticas
 
