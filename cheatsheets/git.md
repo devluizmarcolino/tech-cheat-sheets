@@ -182,6 +182,72 @@ git stash pop
 - Guarda mudanças sem commitar
 - Útil para trocar de branch rapidamente
 
+---
+
+## Padrões de Commit
+
+### Conventional Commits
+
+#### Estrutura Básica
+```
+<tipo>(<escopo>): <descrição>
+
+[corpo opcional]
+
+[rodapé opcional]
+```
+
+#### Tipos de Commits
+- `feat`: Nova funcionalidade
+- `fix`: Correção de bug
+- `docs`: Alterações em documentação
+- `style`: Formatação de código
+- `refactor`: Refatoração de código
+- `test`: Adição/modificação de testes
+- `chore`: Tarefas de manutenção
+
+#### Exemplos Práticos
+```bash
+# Adicionar funcionalidade
+git commit -m "feat: adicionar login de usuário"
+
+# Corrigir bug
+git commit -m "fix: corrigir erro de validação de email"
+
+# Refatoração
+git commit -m "refactor(auth): simplificar lógica de autenticação"
+```
+
+### Boas Práticas
+
+#### Diretrizes de Commit
+- Mensagens claras e concisas
+- Usar imperativo presente
+- Primeira linha com até 72 caracteres
+- Explicar "o quê" e "por que", não "como"
+
+#### Exemplo Completo
+```bash
+feat(user-auth): implementar autenticação JWT
+
+- Adiciona suporte para JSON Web Tokens
+- Melhora segurança do processo de login
+- Resolve problema de sessões expiradas
+
+Closes #123
+```
+
+### Ferramentas de Apoio
+- Commitizen
+- Conventional Changelog
+- Husky (git hooks)
+
+### Links de Referência
+- [Conventional Commits](https://www.conventionalcommits.org/)
+- [Angular Commit Guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+
+---
+
 ## Links Úteis 🌐
 
 ### Documentação e Aprendizado
