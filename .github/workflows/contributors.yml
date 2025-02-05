@@ -22,5 +22,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         image_size: 100
-        columns: 10
         commit_message: "docs: atualizar contribuidores"
