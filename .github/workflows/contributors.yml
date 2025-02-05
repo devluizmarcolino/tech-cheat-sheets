@@ -11,10 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
     - name: Verificar repositório
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Obter contribuidores
       uses: akhilmhdh/contributors-readme-action@v2.3.6
@@ -23,3 +26,7 @@ jobs:
       with:
         image_size: 100
         commit_message: "docs: atualizar contribuidores"
+        readme_path: "README.md"
+        columns_per_row: 6
+        collaborators: all
+        max_contributors: 100
