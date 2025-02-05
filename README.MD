@@ -48,7 +48,8 @@ Dê uma olhada no arquivo [CONTRIBUTING.md](./CONTRIBUTING.md) para mais detalhe
 Um agradecimento especial a todos que contribuíram para este projeto:
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-
+<!-- ALL-CONTRIBUTORS-LIST:START - Não remova ou modifique esta seção -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 </div>
 
 ---
