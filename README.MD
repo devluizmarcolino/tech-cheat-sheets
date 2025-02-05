@@ -40,6 +40,17 @@ Toda ajuda é bem-vinda! Para colaborar, siga esses passos:
 
 Dê uma olhada no arquivo [CONTRIBUTING.md](./CONTRIBUTING.md) para mais detalhes.
 
+
+---
+
+## 👥 Contribuidores
+
+Um agradecimento especial a todos que contribuíram para este projeto:
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+
+</div>
+
 ---
 
 
