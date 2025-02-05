@@ -2,7 +2,6 @@
 
 Este cheat sheet traz uma referência rápida para CSS com tags essenciais, boas práticas e exemplos práticos.
 
-
 ---
 
 ## Seletores Básicos
@@ -44,8 +43,6 @@ Este cheat sheet traz uma referência rápida para CSS com tags essenciais, boas
 }
 ```
 
----
-
 ## Layout Moderno
 
 ### Flexbox
@@ -78,8 +75,6 @@ Este cheat sheet traz uma referência rápida para CSS com tags essenciais, boas
     grid-row: 1 / 3; /* Da linha 1 até a 3 */
 }
 ```
-
----
 
 ## Responsividade
 
@@ -125,6 +120,10 @@ Este cheat sheet traz uma referência rápida para CSS com tags essenciais, boas
     box-sizing: border-box;
 }
 ```
+**Motivo**: 
+- Elimina margens e paddings padrão dos navegadores
+- Garante que o tamanho total do elemento inclua padding e border
+- Cria uma base consistente para estilização em diferentes navegadores
 
 ### Centralização Perfeita
 ```css
@@ -135,6 +134,10 @@ Este cheat sheet traz uma referência rápida para CSS com tags essenciais, boas
     height: 100vh;
 }
 ```
+**Motivo**:
+- Flexbox oferece método simples de centralização
+- Funciona para elementos de qualquer tamanho
+- `height: 100vh` centraliza verticalmente na tela inteira
 
 ## Animações
 ```css
@@ -153,8 +156,6 @@ Este cheat sheet traz uma referência rápida para CSS com tags essenciais, boas
 - Use `transform` e `opacity` para animações
 - Evite seletores muito específicos
 - Use `will-change` com moderação
-
----
 
 ## Ferramentas e Debugging
 
@@ -180,8 +181,8 @@ Este cheat sheet traz uma referência rápida para CSS com tags essenciais, boas
 - Stylus
 
 ### Validadores
-- W3C CSS Validator
-- CSS Lint
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/): Verifica a validade do seu código CSS
+- [CSS Lint](http://csslint.net/): Ferramenta de análise de qualidade do código
 
 ### Ferramentas de Otimização
 - PurgeCSS: Remove CSS não utilizado
@@ -189,6 +190,6 @@ Este cheat sheet traz uma referência rápida para CSS com tags essenciais, boas
 - Critical: Extrai CSS crítico para carregamento inicial
 
 ### Recursos Online
-- CSS-Tricks
-- MDN Web Docs
-- CodePen para experimentação
+- [CSS-Tricks](https://css-tricks.com/)
+- [MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [CodePen](https://codepen.io/) para experimentação
