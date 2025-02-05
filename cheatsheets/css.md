@@ -2,140 +2,193 @@
 
 Este cheat sheet traz uma referência rápida para CSS com tags essenciais, boas práticas e exemplos práticos.
 
----
-
-## 🔗 Estrutura Básica
-```html
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com CSS</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1>Olá, CSS!</h1>
-  </body>
-</html>
-```
-```css
-/* styles.css */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
-```
 
 ---
 
-## 🛏 Seletor Básico
+## Seletores Básicos
+
+### Seletores Elementares
+- `*`: Seleciona todos os elementos
+- `div`: Seleciona todos os elementos `<div>`
+- `.classe`: Seleciona elementos com uma classe específica
+- `#id`: Seleciona um elemento com um ID específico
+
+### Seletores Combinadores
+- `div p`: Seleciona parágrafos dentro de divs
+- `div > p`: Seleciona parágrafos filhos diretos de divs
+- `div + p`: Seleciona parágrafos imediatamente após divs
+- `div ~ p`: Seleciona parágrafos que são irmãos de divs
+
+## Propriedades Fundamentais
+
+### Box Model
 ```css
-h1 {
-  color: #338da4;
-  font-size: 2rem;
-  text-align: center;
+.elemento {
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid black;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
 }
 ```
-### Explicação
-- `color`: Cor do texto.
-- `font-size`: Tamanho da fonte.
-- `text-align`: Alinhamento do texto.
 
----
-
-## 🔧 Boas Práticas
-1. **Mantenha o CSS Organizado:** Separe seletores por seções e comente onde necessário.
-2. **Evite IDs:** Prefira classes para reutilização de estilos.
-3. **Mobile First:** Comece pensando no design para telas menores.
-
-Exemplo básico de responsividade:
+### Cores e Fundos
 ```css
-body {
-  font-size: 16px;
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
+.elemento {
+    color: #333;
+    background-color: rgba(255, 0, 0, 0.5);
+    background-image: url('imagem.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 ```
 
 ---
 
-## 💡 Truques Úteis
-### Estilizar Links Apenas ao Passar o Mouse
-```css
-a:hover {
-  text-decoration: underline;
-  color: #569987;
-}
-```
-### Centralizar Conteúdo com Flexbox
+## Layout Moderno
+
+### Flexbox
 ```css
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    flex-direction: row; /* row | column | row-reverse | column-reverse */
+    justify-content: space-between; /* Alinhamento horizontal */
+    align-items: center; /* Alinhamento vertical */
+    gap: 10px; /* Espaço entre itens */
 }
 ```
-### Efeitos Suaves com Transições
+
+#### Flex Item Properties
+- `flex-grow`: Proporção de crescimento
+- `flex-shrink`: Proporção de redução
+- `flex-basis`: Tamanho inicial do item
+
+### CSS Grid
 ```css
-button {
-  background-color: #338da4;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Colunas proporcionais */
+    grid-template-rows: 100px 200px;
+    gap: 15px;
 }
 
-button:hover {
-  background-color: #569987;
+.grid-item {
+    grid-column: span 2; /* Ocupar duas colunas */
+    grid-row: 1 / 3; /* Da linha 1 até a 3 */
 }
 ```
----
-
-## 🌱 Propriedades Que Valem a Pena Decorar
-- **margin:** Espaço externo ao redor do elemento.
-- **padding:** Espaço interno dentro do elemento.
-- **border:** Borda ao redor do elemento.
-- **display:** Controla o layout (ex: `block`, `inline`, `flex`).
-- **position:** Define o posicionamento (`static`, `absolute`, `fixed`, etc).
 
 ---
 
-## ✨ Estrutura de Layout Simples
+## Responsividade
+
+### Media Queries
 ```css
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* Telas menores que 600px */
+@media screen and (max-width: 600px) {
+    .elemento {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 ```
----
 
-## ⭐ Dica Extra
-Use variáveis CSS para padronizar seu design:
+## Boas Práticas
+
+### Dicas de Estilo
+- Use variáveis CSS para cores e dimensões recorrentes
+- Priorize unidades relativas (`rem`, `%`) sobre absolutas (`px`)
+- Utilize `box-sizing: border-box` globalmente
+- Minimize a especificidade dos seletores
+
+### Variáveis CSS
 ```css
 :root {
-  --cor-primaria: #338da4;
-  --cor-secundaria: #569987;
-  --espacamento-padrao: 16px;
+    --cor-primaria: #3498db;
+    --espacamento-padrao: 1rem;
 }
 
-body {
-  background-color: var(--cor-primaria);
-  color: white;
-  padding: var(--espacamento-padrao);
+.elemento {
+    background-color: var(--cor-primaria);
+    margin: var(--espacamento-padrao);
 }
 ```
+
+## Truques Úteis
+
+### Reset CSS Moderno
+```css
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+```
+
+### Centralização Perfeita
+```css
+.centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+```
+
+## Animações
+```css
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.elemento {
+    animation: slideIn 0.5s ease-in-out;
+}
+```
+
+## Performance
+- Minimize reflows e repaints
+- Use `transform` e `opacity` para animações
+- Evite seletores muito específicos
+- Use `will-change` com moderação
+
 ---
 
-Pronto para deixar seus projetos lindos? Fique à vontade para ajustar e experimentar!
+## Ferramentas e Debugging
+
+### Ferramentas de Desenvolvimento
+- **Chrome DevTools**: 
+  - Inspecionar e modificar estilos em tempo real
+  - Verificar layout, box model e responsividade
+  - Analisar performance de renderização
+
+- **Firefox Developer Tools**:
+  - Grid e Flexbox inspector
+  - Ferramentas de animação
+  - Análise de layout 3D
+
+### Frameworks CSS
+- Tailwind CSS: Utility-first
+- Bootstrap: Sistema de grid responsivo
+- Bulma: Flexbox-based
+
+### Pré-processadores
+- Sass
+- Less
+- Stylus
+
+### Validadores
+- W3C CSS Validator
+- CSS Lint
+
+### Ferramentas de Otimização
+- PurgeCSS: Remove CSS não utilizado
+- PostCSS: Transformações de CSS com JavaScript
+- Critical: Extrai CSS crítico para carregamento inicial
+
+### Recursos Online
+- CSS-Tricks
+- MDN Web Docs
+- CodePen para experimentação
