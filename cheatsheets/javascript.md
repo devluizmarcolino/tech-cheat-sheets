@@ -34,6 +34,8 @@ let objeto = {             // Object
 };
 ```
 
+---
+
 ### Operadores
 ```javascript
 // Matemáticos
@@ -68,6 +70,8 @@ let estritamenteIgual = (5 === "5"); // false (compara valor e tipo)
 - **Comportamento**:
   - `5 == "5"` retorna `true` (compara valor)
   - `5 === "5"` retorna `false` (compara valor e tipo)
+
+  ---
 
 ## Estruturas de Controle
 
@@ -114,6 +118,8 @@ switch (diaDaSemana) {
   - Para "Segunda": mostra "Início da semana"
   - Para "Sexta": mostra "Quase fim de semana"
   - Para outros dias: mostra "Dia normal"
+
+  ---
 
 ### Loops
 ```javascript
@@ -162,6 +168,8 @@ for (let propriedade in pessoa) {
 - **Resultado Esperado**:
   - Imprime: "nome: João", "idade: 25"
 
+  ---
+
 ## Funções: Blocos de Código Reutilizáveis
 
 ```javascript
@@ -205,6 +213,8 @@ function saudacao(nome = "Visitante") {
   - `saudacao()` retorna "Olá, Visitante!"
   - `saudacao("Maria")` retorna "Olá, Maria!"
 
+  ---
+
 ## Manipulação de Arrays
 
 ```javascript
@@ -240,6 +250,8 @@ let filtrado = numeros.filter(x => x > 3);
 - **`filter()`**:
   - Cria novo array com elementos que passam no teste
   - Mantém apenas elementos que atendem condição específica
+
+  ---
 
 ## Programação Assíncrona
 
@@ -285,6 +297,8 @@ async function exemplo() {
 - **Comportamento**:
   - `await`: Pausa execução até Promise ser resolvida
   - `try/catch`: Captura erros de forma elegante
+
+  ---
 
 ## Links Úteis 🌐
 
