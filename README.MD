@@ -15,6 +15,7 @@ Bem-vindo ao repositório **Tech Cheat Sheets**! A ideia aqui é ajudar você a 
 | [Git](./cheatsheets/git.md) | Comandos para sobreviver ao Git |
 | [Tailwind CSS](./cheatsheets/tailwind.md) | Dicas, truques e classes |
 | [Bootstrap](./cheatsheets/bootstrap.md) | Instalação, grid, componentes |
+| [React](./cheatsheets/react.md) | Instalação, grid, componentes |
 
 ### Recursos Extras
 | Categoria | O que tem de bom |
