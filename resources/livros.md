@@ -1,4 +1,4 @@
-# Livros Que Todo Programador Deve Ler 📚
+# Livros que todo programador deve ler 
 
 ---
 
