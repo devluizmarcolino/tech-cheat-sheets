@@ -10,10 +10,11 @@ Bem-vindo ao repositório **Tech Cheat Sheets**! A ideia aqui é ajudar você a 
 | Tecnologia | O que você vai encontrar |
 |------------|-----------------------------|
 | [HTML](./cheatsheets/html.md) | Tags essenciais e boas práticas |
-| [CSS](./cheatsheets/css.md) | Truques de layout, Flexbox e Grid |
+| [CSS](./cheatsheets/css.md) | Truques de layout, flexbox e grid |
 | [JavaScript](./cheatsheets/javascript.md) | Dicas para DOM e funções úteis |
 | [Git](./cheatsheets/git.md) | Comandos para sobreviver ao Git |
 | [Tailwind CSS](./cheatsheets/tailwind.md) | Dicas, truques e classes |
+| [Bootstrap](./cheatsheets/bootstrap.md) | Instalação, grid, componentes |
 
 ### Recursos Extras
 | Categoria | O que tem de bom |
